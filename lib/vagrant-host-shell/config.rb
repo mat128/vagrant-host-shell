@@ -13,7 +13,7 @@ module VagrantPlugins::HostShell
     def finalize!
       @inline = nil if @inline == UNSET_VALUE
       @cwd = nil if @cwd == UNSET_VALUE
-      @abort_on_nonzero = false if @abort_on_nonzero == UNSET_VALUE
+      @abort_on_nonzero = true if @abort_on_nonzero == UNSET_VALUE
     end
 
     def validate(machine)
